@@ -12,8 +12,10 @@ namespace Linkedlist_Datastructure
         {
             CustomLinkedlist customLinkedlist = new CustomLinkedlist();
             customLinkedlist.Append(56);
+            customLinkedlist.Append(30);
             customLinkedlist.Append(70);
-            customLinkedlist.InsertNode(1, 30);
+            customLinkedlist.Display();
+            customLinkedlist.Pop();
             customLinkedlist.Display();
 
             Console.ReadLine();

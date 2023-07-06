@@ -28,19 +28,14 @@ namespace Linkedlist_Datastructure
                 Console.WriteLine("{0} node is added into linkelist", newNode.data);
             }
         }
-        public void InsertNode(int idx, int data)
+        public void Pop()
         {
-            Node newNode = new Node(data);
-            Node temp = head;
-            int index = 0;
-            while(index < idx - 1)    
+            if(head == null)
             {
-                temp = temp.next;
-                index++;
+                Console.WriteLine("LinkedList is Empty");
             }
-            newNode.next = temp.next;
-            temp.next = newNode;
-            Console.WriteLine("{0} node is inserted between 56 and 70", newNode.data);
+            head = head.next;
+            Console.WriteLine("First Element Deleted successfully");
         }
         public void Display()
         {
