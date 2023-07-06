@@ -8,15 +8,35 @@ namespace Linkedlist_Datastructure
 {
     public class CustomLinkedlist
     {
-        public void CreateList()
+        public Node head;
+        public void Add(int data)
         {
-            LinkedList<int> list = new LinkedList<int>();
-            list.AddLast(56);
-            list.AddLast(30);
-            list.AddLast(70);
-            foreach(int val in list)
+            Node newNode = new Node(data);
+            if(head == null)
             {
-                Console.Write(val+"->");
+                head = newNode;
+            }
+            else
+            {
+                newNode.next = head;
+                head = newNode;
+            }
+        }
+        public void Display()
+        {
+            Node temp = head;
+            if(head == null)
+            {
+                Console.WriteLine("Linkedlist is Empty");
+            }
+            else
+            {
+                while(temp != null)
+                {
+                    Console.Write(temp.data+"->");
+                    temp = temp.next;
+                }
+                Console.WriteLine("null");
             }
         }
     }

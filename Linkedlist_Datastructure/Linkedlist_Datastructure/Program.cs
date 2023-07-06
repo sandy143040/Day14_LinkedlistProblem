@@ -11,7 +11,10 @@ namespace Linkedlist_Datastructure
         static void Main(string[] args)
         {
             CustomLinkedlist customLinkedlist = new CustomLinkedlist();
-            customLinkedlist.CreateList();
+            customLinkedlist.Add(70);
+            customLinkedlist.Add(30);
+            customLinkedlist.Add(56);
+            customLinkedlist.Display();
             Console.ReadLine();
         }
     }
