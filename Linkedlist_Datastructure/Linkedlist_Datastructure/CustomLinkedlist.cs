@@ -9,17 +9,23 @@ namespace Linkedlist_Datastructure
     public class CustomLinkedlist
     {
         public Node head;
-        public void Add(int data)
+        public void Append(int data)
         {
             Node newNode = new Node(data);
-            if(head == null)
+            if (head == null)
             {
                 head = newNode;
+                Console.WriteLine("{0} node is added into linkelist", newNode.data);
             }
             else
             {
-                newNode.next = head;
-                head = newNode;
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = newNode;
+                Console.WriteLine("{0} node is added into linkelist", newNode.data);
             }
         }
         public void Display()
