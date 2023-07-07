@@ -15,7 +15,7 @@ namespace Linkedlist_Datastructure
             customLinkedlist.Append(30);
             customLinkedlist.Append(70);
             customLinkedlist.Display();
-            customLinkedlist.Pop();
+            customLinkedlist.PopLast();
             customLinkedlist.Display();
 
             Console.ReadLine();
