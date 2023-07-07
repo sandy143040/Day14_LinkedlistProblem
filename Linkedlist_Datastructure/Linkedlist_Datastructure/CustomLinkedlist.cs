@@ -28,26 +28,24 @@ namespace Linkedlist_Datastructure
                 Console.WriteLine("{0} node is added into linkelist", newNode.data);
             }
         }
-        public void PopLast()
+        public int Search(int key)
         {
-            if(head == null)
+            Node temp = head;
+            if (temp == null)
             {
-                Console.WriteLine("LinkedList is Empty");
+                return -1;
             }
-            if (head.next == null)
+            int index = 0;
+            while (temp != null)
             {
-                Console.WriteLine("The next element of head is null");
-            }
-            else
-            {
-                Node temp = head;
-                while(temp.next.next != null)
+                if (temp.data == key)
                 {
-                    temp = temp.next;
+                    return index;
                 }
-                temp.next = null;
-                Console.WriteLine("Deleted last element");
+                temp = temp.next;
+                index++;
             }
+            return -1;
         }
         public void Display()
         {

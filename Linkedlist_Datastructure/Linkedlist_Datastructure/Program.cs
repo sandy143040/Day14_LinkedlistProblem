@@ -15,8 +15,8 @@ namespace Linkedlist_Datastructure
             customLinkedlist.Append(30);
             customLinkedlist.Append(70);
             customLinkedlist.Display();
-            customLinkedlist.PopLast();
-            customLinkedlist.Display();
+            int key = customLinkedlist.Search(70);
+            Console.WriteLine("present at index position: " + key);
 
             Console.ReadLine();
         }
