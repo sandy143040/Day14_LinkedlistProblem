@@ -28,37 +28,32 @@ namespace Linkedlist_Datastructure
                 Console.WriteLine("{0} node is added into linkelist", newNode.data);
             }
         }
-        public int Search(int key)
+        public void InsertNode(int idx, int data)
         {
+            Node newNode = new Node(data);
             Node temp = head;
-            if (temp == null)
-            {
-                return -1;
-            }
             int index = 0;
-            while (temp != null)
+            while (index < idx - 1)
             {
-                if (temp.data == key)
-                {
-                    return index;
-                }
                 temp = temp.next;
                 index++;
             }
-            return -1;
+            newNode.next = temp.next;
+            temp.next = newNode;
+            Console.WriteLine("{0} node is inserted after 30 to LinkedList", newNode.data);
         }
         public void Display()
         {
             Node temp = head;
-            if(head == null)
+            if (head == null)
             {
                 Console.WriteLine("Linkedlist is Empty");
             }
             else
             {
-                while(temp != null)
+                while (temp != null)
                 {
-                    Console.Write(temp.data+"->");
+                    Console.Write(temp.data + "->");
                     temp = temp.next;
                 }
                 Console.WriteLine("null");
